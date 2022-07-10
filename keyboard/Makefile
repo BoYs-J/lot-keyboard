@@ -1,6 +1,6 @@
 OUTPUT_DIR = _build
 # SUBDIRS=$(filter-out $(OUTPUT_DIR),$(shell ls -l | grep ^d | awk '{print $$9}'))
-SUBDIRS=$(filter-out $(OUTPUT_DIR),$(shell ls -l | grep ^d | grep -v 'alicego\|amx_2hkb60\|ergoconn\|farad69\|gt-ble60\|lkb-core\|lot60-ble\|newhope64\|Omega45\|Omega50\|Omega64\|Omega84\|template' | awk '{print $$9}'))
+SUBDIRS=$(filter-out $(OUTPUT_DIR),$(shell ls -l | grep ^d | grep -v 'alicego\|amx_2hkb60\|ergoconn\|farad69\|gt-ble60\|lkb-core\|lot60-ble\|newhope64\|Omega45\|Omega50\|Omega64\|template' | awk '{print $$9}'))
 
 export VERSION=$(shell git describe --always --dirty || echo 'unknown')
 export BUILDTIME=$(shell date +"%Y_%m_%d")
