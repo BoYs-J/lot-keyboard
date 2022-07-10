@@ -47,3 +47,13 @@ jobs:
         cd keyboard
         make -j
         cd ../
+
+    # 上传编译生成的固件
+    - name: 📤 Upload Artifact Files
+      uses: actions/upload-artifact@v2
+      with:
+        name: LotKB_Keyboard_Firmware
+        path: |
+          /home/runner/work/lot-keyboard/lot-keyboard/keyboard/_build/*.zip
+          /home/runner/work/lot-keyboard/lot-keyboard/keyboard/_build/*.hex
+          /home/runner/work/lot-keyboard/lot-keyboard/keyboard/_build/*.bin
